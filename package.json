@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"No test specified\" && exit 0",
-    "build": "echo \"Nothing to build\" && exit 0",
+    "build": "cp -r 01-external-dependencies build",
     "deploy": "gh-pages -d 01-external-dependencies --dotfiles"
   },
   "repository": {

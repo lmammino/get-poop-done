@@ -19,12 +19,8 @@ jobs:
           - v1-dependencies-
 
       - run:
-          name: Update npm
-          command: npm i -g npm@5.7
-
-      - run:
           name: Install dependencies
-          command: npm ci
+          command: npm install
 
       - save_cache:
           paths:
@@ -45,7 +41,7 @@ jobs:
               if [ "${DOMAIN}" ]; then
                 echo "$DOMAIN" > build/CNAME
               fi
-              cp -r .circleci 01-external-dependencies/.circleci
+              cp -r .circleci build/.circleci
               git config --global user.email "$GH_EMAIL"
               git config --global user.name "$GH_NAME"
               NODE_DEBUG=gh-pages npm run deploy -- -m 'Automated build'
