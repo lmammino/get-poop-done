@@ -1,190 +1,171 @@
-:root
-{
-  --colorbg:#F2EEE9;
-  --colorbghighlight:#F4D8CD;
-  --colorprimary:#114B5F;
-  --colorprimarysoft:#96BDC6;
-  --colorprimarytext:#494949;
-  --colorsecondary:#AD662B;
+:root {
+  --colorBg: #F2EEE9;
+  --colorBgHighlight: #F4D8CD;
+  --colorPrimary: #114B5F;
+  --colorPrimarySoft: #96BDC6;
+  --colorSecondary: #AD662B;
+  --colorPrimaryText: #494949;
 }
 
-html,body
-{
-  height:100vh;
+html, body {
+  height: 100vh;
 }
 
-html *,body *
-{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+html *,
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body
-{
-  background:var(--colorBg);
-  color:var(--colorPrimary);
-  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size:16px;
-  margin:0;
+body {
+  background: var(--colorBg);
+  color: var(--colorPrimary);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
 }
 
-#app
-{
-  margin:2rem auto;
-  max-width:800px;
-  min-width:400px;
-  padding:1rem;
+#app {
+  margin: 2rem auto;
+  max-width: 800px;
+  min-width: 400px;
+  padding: 1rem;
 }
 
-#app .header h1,#app .header h2
-{
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background:linear-gradient(0deg,var(--colorSecondary) 50% var(--colorPrimarySoft) 90% var(--colorPrimary));
-  margin:0;
-  text-align:center;
+#app .header h1,
+#app .header h2 {
+  background: var(--colorPrimarySoft);
+  background: -webkit-linear-gradient(0deg, var(--colorSecondary) 50%, var(--colorPrimarySoft) 90%, var(--colorPrimary));
+  background: linear-gradient(0deg, var(--colorSecondary) 50%, var(--colorPrimarySoft) 90%, var(--colorPrimary));
+  margin: 0;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-#app .header h1
-{
-  font-size:2rem;
+#app .header h1 {
+  font-size: 2rem;
 }
 
-#app .header h2
-{
-  font-size:1.2rem;
+#app .header h2 {
+  font-size: 1.2rem;
 }
 
-#app .add-todo-box
-{
-  align-items:center;
-  background:var(--colorBgHighlight);
-  display:flex;
-  margin:2rem auto;
-  max-width:800px;
-  padding:1rem;
+#app .add-todo-box {
+  background: var(--colorBgHighlight);
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 
-#app .add-todo-box input
-{
-  background:var(--colorBg);
-  border:none;
-  border-bottom:1px solid transparent;
-  color:var(--colorSecondary);
-  flex:1 1 auto;
-  font-size:1.4em;
-  height:2rem;
-  min-width:10%;
-  padding:1rem .5rem;
-  transition:border-bottom .5s;
+#app .add-todo-box input {
+  background: var(--colorBg);
+  border: none;
+  border-bottom: 1px solid transparent;
+  color: var(--colorSecondary);
+  flex: 1 1 auto;
+  font-size: 1.4em;
+  height: 2rem;
+  min-width: 10%;
+  padding: 1rem .5rem;
+  transition: border-bottom .5s;
 }
 
-#app .add-todo-box input:focus
-{
-  border:none;
-  border-bottom:1px solid var(--colorSecondary);
-  outline:none;
+#app .add-todo-box input:focus {
+  border: none;
+  border-bottom: 1px solid var(--colorSecondary);
+  outline: none;
 }
 
-#app .add-todo-box button
-{
-  background:transparent;
-  border:2px solid transparent;
-  color:var(--colorSecondary);
-  display:block;
-  font-size:1.4rem;
-  height:2em;
-  margin:0 0 0 .5rem;
-  padding:0 1rem;
+#app .add-todo-box button {
+  background: transparent;
+  border: 2px solid transparent;
+  color: var(--colorSecondary);
+  display: block;
+  font-size: 1.4rem;
+  height: 2em;
+  margin: 0 0 0 .5rem;
+  padding: 0 1rem;
 }
 
-#app .add-todo-box button:focus
-{
-  border:2px dotted #ccc;
-  outline:none;
+#app .add-todo-box button:focus {
+  outline: none;
+  border: 2px dotted #ccc;
 }
 
-#app .add-todo-box button:active
-{
-  border:2px solid transparent;
-  border-bottom:2px solid var(--colorSecondary);
-  outline:none;
+#app .add-todo-box button:active {
+  outline: none;
+  border: 2px solid transparent;
+  border-bottom: 2px solid var(--colorSecondary);
 }
 
-#app .todo-list
-{
-  min-height:300px;
+#app .todo-list {
+  min-height: 300px;
 }
 
-#app .todo-list .nothing
-{
-  font-size:2em;
-  padding:2em 0;
-  text-align:center;
+#app .todo-list .nothing {
+  font-size: 2em;
+  padding: 2em 0;
+  text-align: center;
 }
 
-#app .todo-list ul
-{
-  list-style:none;
-  margin:0;
+#app .todo-list ul {
+  list-style: none;
+  margin: 0;
 }
 
-#app .todo-list ul li
-{
-  font-size:1.4em;
+#app .todo-list ul li {
+  font-size: 1.4em;
 }
 
-#app .todo-list ul li a
-{
-  border-bottom:1px solid var(--colorBgHighlight);
-  color:var(--colorPrimaryText);
-  display:block;
-  padding:.5rem 1rem;
-  text-decoration:none;
-  width:100%;
+#app .todo-list ul li a {
+  border-bottom: 1px solid var(--colorBgHighlight);
+  color: var(--colorPrimaryText);
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  width: 100%;
 }
 
-#app .todo-list ul li a:hover
-{
-  color:var(--colorPrimary);
+#app .todo-list ul li a:hover {
+  color: var(--colorPrimary);
 }
 
-#app .todo-list ul li a::before
-{
-  border:2px solid var(--colorPrimarySoft);
-  border-radius:.8rem;
-  content:"";
-  display:inline-block;
-  height:1.2rem;
-  margin:0 .5em 0 0;
-  transition:background .5s;
-  vertical-align:-3px;
-  width:1.2rem;
+#app .todo-list ul li a::before {
+  content: "";
+  border: 2px solid var(--colorPrimarySoft);
+  border-radius: 0.8rem;
+  display: inline-block;
+  margin: 0 .5em 0 0;
+  height: 1.2rem;
+  transition: background .5s;
+  vertical-align: -3px;
+  width: 1.2rem;
 }
 
-#app .todo-list ul li a:hover::before
-{
-  background:var(--colorPrimarySoft);
-  border-color:var(--colorPrimary);
+#app .todo-list ul li a:hover::before {
+  background: var(--colorPrimarySoft);
+  border-color: var(--colorPrimary);
 }
 
-#app .footer
-{
-  color:var(--colorPrimaryText);
-  font-size:1rem;
-  margin:1rem 0 0;
-  padding:1rem 0 0 1rem;
+#app .footer {
+  color: var(--colorPrimaryText);
+  font-size: 1rem;
+  margin: 1rem 0 0;
+  padding: 1rem 0 0 1rem;
 }
 
-.tippy-tooltip.poo-theme
-{
-  background:linear-gradient(0deg,var(--colorPrimary) 30% var(--colorPrimarySoft));
+.tippy-tooltip.poo-theme {
+  background: var(--colorPrimarySoft);
+  background: -webkit-linear-gradient(0deg, var(--colorPrimary) 30%, var(--colorPrimarySoft));
+  background: linear-gradient(0deg, var(--colorPrimary) 30%, var(--colorPrimarySoft));
 }
 
-.tippy-popper .tippy-tooltip.poo-theme .tippy-arrow
-{
-  border-left:10px solid transparent;
-  border-right:10px solid transparent;
-  border-top:10px solid var(--colorPrimary);
+.tippy-popper .tippy-tooltip.poo-theme .tippy-arrow {
+  border-top: 10px solid var(--colorPrimary);
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
 }
