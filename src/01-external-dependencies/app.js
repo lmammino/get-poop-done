@@ -112,6 +112,7 @@ const storedCompletedTasks = store.get('completedTasks', 0)
 const favicon = new Favico({
   animation: 'popFade', position: 'up'
 })
+favicon.badge(storedTodos.length)
 
 const app = todoApp($('#app'), {
   todos: storedTodos,
