@@ -1,3 +1,4 @@
+/* global $, tippy, UUID, confetti, store */
 const colors = ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a']
 
 const todoApp = (rootEl, opt = {}) => {
@@ -74,7 +75,6 @@ const todoApp = (rootEl, opt = {}) => {
     completedTasks++
     // every 10 todos completed spread some confetti!
     if (completedTasks % 10 === 0) {
-      const el = $(`#${removedItem.id}`).get(0)
       confetti(rootEl.get(0), {colors, angle: 45})
     }
     render()
@@ -121,11 +121,11 @@ store.set('init', true)
 
 if (!returning) {
 // for the first init
-  app.add('Buy soy milk'),
-  app.add('Do homeworks'),
-  app.add('Prepare material for the talk'),
-  app.add('Read SPAM emails'),
-  app.add('Write a module bundler'),
-  app.add('Tick some todos'),
+  app.add('Buy soy milk')
+  app.add('Do homeworks')
+  app.add('Prepare material for the talk')
+  app.add('Read SPAM emails')
+  app.add('Write a module bundler')
+  app.add('Tick some todos')
   app.add('Find a better name for this example')
 }
