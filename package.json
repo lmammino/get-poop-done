@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint src",
-    "build": "cp -r src/01-external-dependencies build && cp src/favicons/* build/",
+    "build": "mkdir -p build && cp -r src/01-external-dependencies/* build && cp src/favicons/* build/",
     "deploy": "gh-pages -d build --dotfiles"
   },
   "repository": {

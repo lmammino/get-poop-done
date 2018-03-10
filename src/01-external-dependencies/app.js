@@ -1,4 +1,4 @@
-/* global $, tippy, UUID, confetti, store */
+/* global $, tippy, UUID, confetti, store, Favico */
 const colors = ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a']
 
 const todoApp = (rootEl, opt = {}) => {
@@ -109,10 +109,15 @@ const returning = store.get('init')
 const storedTodos = store.get('todos', [])
 const storedCompletedTasks = store.get('completedTasks', 0)
 
+const favicon = new Favico({
+  animation: 'popFade', position: 'up'
+})
+
 const app = todoApp($('#app'), {
   todos: storedTodos,
   completedTasks: storedCompletedTasks,
   onChange: (todos, completedTasks) => {
+    favicon.badge(todos.length)
     store('todos', todos)
     store('completedTasks', completedTasks)
   }
