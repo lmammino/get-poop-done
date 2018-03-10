@@ -6,7 +6,7 @@ jobs:
         - gh-pages
 
     docker:
-      - image: circleci/node:8.3
+      - image: circleci/node:9.7
 
     working_directory: ~/get-poop-done
 
@@ -19,8 +19,12 @@ jobs:
           - v1-dependencies-
 
       - run:
+          name: Update npm
+          command: npm i -g npm@5.7
+
+      - run:
           name: Install dependencies
-          command: npm install
+          command: npm ci
 
       - save_cache:
           paths:
@@ -41,7 +45,7 @@ jobs:
               if [ "${DOMAIN}" ]; then
                 echo "$DOMAIN" > build/CNAME
               fi
-              cp -r .circleci build/.circleci
+              cp -r .circleci 01-external-dependencies/.circleci
               git config --global user.email "$GH_EMAIL"
               git config --global user.name "$GH_NAME"
               NODE_DEBUG=gh-pages npm run deploy -- -m 'Automated build'
