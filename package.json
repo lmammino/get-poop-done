@@ -1,0 +1,31 @@
+{
+  "name": "get-poop-done",
+  "version": "1.0.0",
+  "description": "A crappy-but-lovely™ todo list app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "build": "echo \"Nothing to build\" && exit 0",
+    "deploy": "gh-pages -d 01-external-dependencies --dotfiles",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmammino/get-poop-done.git"
+  },
+  "keywords": [],
+  "author": "Luciano Mammino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lmammino/get-poop-done/issues"
+  },
+  "homepage": "https://github.com/lmammino/get-poop-done#readme",
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gh-pages": "^1.1.0"
+  }
+}
