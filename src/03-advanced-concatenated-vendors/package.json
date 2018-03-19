@@ -6,7 +6,7 @@
   "scripts": {
     "build:folder": "mkdir -p ../../build/v3",
     "build:vendors": "lumpy build ../../build/v3/vendors.js",
-    "build:copy:files": "cp ./*.{js,css,html} ../../build/v3",
+    "build:copy:files": "cp app.js style.css index.html ../../build/v3",
     "build:copy:assets": "cp ../assets/* ../../build/v3",
     "build": "npm run build:folder && npm run build:vendors && npm run build:copy:files && npm run build:copy:assets"
   },

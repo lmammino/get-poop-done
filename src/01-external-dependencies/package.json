@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build:folder": "mkdir -p ../../build",
-    "build:copy:files": "cp ./*.{js,css,html} ../../build",
+    "build:copy:files": "cp app.js style.css index.html ../../build",
     "build:copy:assets": "cp ../assets/* ../../build",
     "build": "npm run build:folder && npm run build:copy:files && npm run build:copy:assets"
   },
