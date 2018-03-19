@@ -30,7 +30,7 @@ body {
   margin: 2rem auto;
   max-width: 800px;
   min-width: 400px;
-  padding: 1rem;
+  padding: 1rem 1rem 110px 1rem;
 }
 
 #app .header h1,
@@ -168,4 +168,36 @@ body {
   border-top: 10px solid var(--colorPrimary);
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
+}
+
+.github-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
+.ad-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.ad-bar a {
+  display: block;
+  padding: .5rem;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 90%;
+  background: var(--colorBgHighlight);
+  border-radius: 1rem 1rem 0 0;
+  color: black;
+  text-decoration: none;
+  bottom: 0;
+  font-size: small;
+}
+
+.ad-bar a:hover {
+  text-decoration: underline;
 }
