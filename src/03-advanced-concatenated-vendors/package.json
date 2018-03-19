@@ -1,0 +1,19 @@
+{
+  "name": "03-advanced-concatenated-vendors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build:folder": "mkdir -p ../../build/v3",
+    "build:vendors": "lumpy build ../../build/v3/vendors.js",
+    "build:copy:files": "cp ./*.{js,css,html} ../../build/v3",
+    "build:copy:assets": "cp ../assets/* ../../build/v3",
+    "build": "npm run build:folder && npm run build:vendors && npm run build:copy:files && npm run build:copy:assets"
+  },
+  "keywords": [],
+  "author": "Luciano Mammino",
+  "license": "MIT",
+  "devDependencies": {
+    "lumpy": "^1.1.0"
+  }
+}
