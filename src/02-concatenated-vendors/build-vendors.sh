@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+set -e
+
 deps=(
     "zepto@1.2.0/dist/zepto.min.js"
     "uuidjs@4.0.3/dist/uuid.core.js"
