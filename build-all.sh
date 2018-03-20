@@ -12,6 +12,7 @@ TO_BUILD=(
     "01-external-dependencies"
     "02-concatenated-vendors"
     "03-advanced-concatenated-vendors"
+    "04-webpack"
   )
 
 mkdir -p build

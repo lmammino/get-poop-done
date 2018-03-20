@@ -1,0 +1,27 @@
+{
+  "name": "04-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build:folder": "mkdir -p ../../build/v4",
+    "build:vendors": "webpack",
+    "build:copy:files": "cp style.css index.html ../../build/v4",
+    "build:copy:assets": "cp ../assets/* ../../build/v4",
+    "build": "npm run build:folder && npm run build:vendors && npm run build:copy:files && npm run build:copy:assets"
+  },
+  "keywords": [],
+  "author": "Luciano Mammino",
+  "license": "MIT",
+  "devDependencies": {
+    "dom-confetti": "0.0.10",
+    "favico.js": "^0.3.10",
+    "store2": "^2.7.0",
+    "tippy.js": "^2.3.0",
+    "uuidjs": "^4.0.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "zepto-webpack": "^1.2.1"
+  },
+  "dependencies": {}
+}
