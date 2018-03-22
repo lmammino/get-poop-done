@@ -13,6 +13,8 @@ TO_BUILD=(
     "02-concatenated-vendors"
     "03-advanced-concatenated-vendors"
     "04-webpack"
+    "05-es2015-modules-webpack"
+    "06-optimize-webpack"
   )
 
 mkdir -p build

@@ -1,0 +1,30 @@
+{
+  "name": "05-advanced-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build:folder": "mkdir -p ../../build/v6",
+    "build:vendors": "webpack",
+    "build:copy:files": "cp style.css index.html ../../build/v6",
+    "build:copy:assets": "cp ../assets/* ../../build/v6",
+    "build": "npm run build:folder && npm run build:vendors && npm run build:copy:files && npm run build:copy:assets"
+  },
+  "keywords": [],
+  "author": "Luciano Mammino",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "babel-loader": "^8.0.0-beta.2",
+    "dom-confetti": "0.0.10",
+    "favico.js": "^0.3.10",
+    "store2": "^2.7.0",
+    "tippy.js": "^2.3.0",
+    "webpack": "^4.1.1",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-cli": "^2.0.12",
+    "zepto-webpack": "^1.2.1"
+  },
+  "dependencies": {}
+}
