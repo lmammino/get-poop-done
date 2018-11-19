@@ -1,5 +1,4 @@
 const { resolve, join } = require('path')
-const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   entry: './app.js',
@@ -22,8 +21,5 @@ module.exports = {
         }
       }
     ]
-  },
-  plugins: [
-    new CompressionPlugin()
-  ]
+  }
 }
