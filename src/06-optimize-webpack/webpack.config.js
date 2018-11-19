@@ -1,4 +1,5 @@
 const { resolve, join } = require('path')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   entry: './app.js',
@@ -22,6 +23,7 @@ module.exports = {
       }
     ]
   },
-  mode: 'production',
-  devtool: 'hidden-source-map'
+  plugins: [
+    new CompressionPlugin()
+  ]
 }
